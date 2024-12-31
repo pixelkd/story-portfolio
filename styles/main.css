@@ -1,0 +1,316 @@
+/* --- Root Variables --- */
+:root {
+  /* Serene Lavender theme as an example */
+  --bg-color: #fafafa;
+  --text-color: #444444;       /* Headline text color and secondary button background */
+  --accent-color: #8a7ca5;     /* Accent color - primary button color */
+  --secondary-color: #6b6b6b;  /* For descriptive text and article text */
+  --heading-font: "Montserrat", sans-serif;
+  --body-font: "Open Sans", sans-serif;
+  --transition-speed: 0.3s;
+  --no-image: #f4f2fa;         /* Fallback color for hero background */
+  --btn-text-color: #ffffff;   /* Text color for primary button */
+  --2nd-btn-text-color: #ffffff; /* Secondary button text color (button background is --text-color) */
+  --article-bg-color: #faf9fc; /* Background for article sections */
+}
+
+/* --- Base Resets / Utilities (partial) --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  line-height: 1.6;
+}
+
+/* Container for consistent horizontal padding */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Header / Navigation --- */
+.site-header {
+  background-color: var(--bg-color);
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 1rem;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color var(--transition-speed);
+}
+
+.nav-links li a:hover {
+  color: var(--accent-color);
+}
+
+/* Mobile toggle (hamburger) */
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.mobile-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  margin: 4px 0;
+  transition: background-color var(--transition-speed);
+}
+
+/* --- Hero Section & Slideshow --- */
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--no-image); /* fallback color if images fail to load */
+}
+
+/* Slideshow container */
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* behind the hero-content */
+}
+
+/* Each slide image */
+.slide-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Active slide at 30% opacity */
+.slide-img.active {
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* on top of slideshow images */
+  color: var(--text-color);
+  
+}
+
+.hero-content h1 {
+  font-family: var(--heading-font);
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 5px rgba(255,255,255,0.6); /* Help separate dark text from lineart when overlapping */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 5px rgba(255,255,255,0.6); /* Help separate dark text from lineart when overlapping */
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: var(--btn-text-color);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: opacity var(--transition-speed);
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  /* Add special styling if you wish */
+}
+
+.btn-secondary {
+  background-color: var(--text-color);
+  color: var(--2nd-btn-text-color);
+}
+
+/* --- Intro / Overview Section --- */
+.intro-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.intro-section h2 {
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section p {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0.5rem auto;
+  color: var(--secondary-color);
+}
+
+/* --- Featured Work --- */
+.featured-work {
+  background-color: var(--article-bg-color);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.featured-work h2 {
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.work-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.work-item {
+  flex: 0 0 300px; /* or use 0 1 300px if you want them to shrink below 300px */
+  text-align: center;
+  background-color: #fff; /* optional card background */
+  border-radius: 4px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: box-shadow var(--transition-speed);
+}
+
+.work-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.work-item img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  transition: transform var(--transition-speed);
+}
+
+.work-item img:hover {
+  transform: scale(1.03);
+}
+
+.work-item h3 {
+  font-family: var(--heading-font);
+  font-size: 1.25rem;
+  margin: 0.5rem;
+}
+
+.work-item p {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin: 0.5rem;
+}
+
+/* Make the <a> inside .work-item fill the entire card area */
+.work-item a.card-link {
+  display: block;               /* ensures the link is block-level */
+  color: inherit;               /* inherit text color from parent */
+  text-decoration: none;        /* remove underlines */
+  height: 100%;
+}
+
+.work-item a.card-link:hover {
+  /* same hover effect as .work-item:hover if you like */
+  text-decoration: none; 
+}
+
+/* --- Footer --- */
+.site-footer {
+  background-color: var(--bg-color);
+  border-top: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Center footer text on smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* --- Responsive Navigation --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 50%;
+    padding: 1rem;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show-nav {
+    display: flex;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+  .slide-img {
+    transition: none;
+  }
+}
+}

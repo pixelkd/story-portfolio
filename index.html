@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jason Wilson Storyboard Portfolio</title>
+  <!-- Link to the main CSS file -->
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">Jason Wilson</a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Mobile toggle button -->
+      <div class="mobile-toggle" id="mobileToggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Slideshow -->
+  <section class="hero-section">
+    <!-- Slideshow container -->
+    <div class="hero-slideshow">
+      <!-- Each image is absolutely positioned, we'll fade in/out with JS -->
+      <img src="images/slideshow/slideshow1.jpg" aria-hidden="true" class="slide-img active" />
+      <img src="images/slideshow/slideshow2.jpg" aria-hidden="true" class="slide-img" />
+      <img src="images/slideshow/slideshow3.jpg" aria-hidden="true" class="slide-img" />
+      <img src="images/slideshow/slideshow4.jpg" aria-hidden="true" class="slide-img" />
+      <img src="images/slideshow/slideshow5.jpg" aria-hidden="true" class="slide-img" />
+	  <!-- slideshow is decrative background, in black and white, with no text -->
+    </div>
+
+    <!-- Hero content over the slideshow -->
+    <div class="hero-content">
+      <h1>Storyboard &amp; Comic Artist</h1>
+      <p>Capturing stories, one frame at a time.</p>
+      <a href="portfolio.html" class="btn btn-primary">View My Work</a>
+    </div>
+  </section>
+
+  <!-- Introduction / Overview -->
+  <section class="intro-section">
+    <div class="container">
+      <h2>Welcome to My Storyboard Portfolio</h2>
+      <p>
+        I create dynamic storyboards for independent film and animation, 
+        as well as comics. Explore my portfolio to see how I bring stories 
+        to life, one sketch at a time.
+      </p>
+    </div>
+  </section>
+
+<section class="featured-work">
+  <div class="container">
+    <h2>Explore My Work</h2>
+    <div class="work-grid">
+
+      <!-- Storyboards item -->
+      <article class="work-item">
+        <a href="storyboards.html" class="card-link">
+          <img
+            src="images/slideshow/slideshow3.jpg"
+            alt="A rough, black-and-white collage of four storyboard panels. ..."
+          />
+          <h3>Storyboards</h3>
+          <p>
+            Cinematic sketches that outline action, pacing, and shot composition for film and animation.
+          </p>
+        </a>
+      </article>
+
+      <!-- Comics item -->
+      <article class="work-item">
+        <a href="comics.html" class="card-link">
+          <img
+            src="images/slideshow/slideshow4.jpg"
+            alt="A three-panel, black-and-white comic snippet featuring a silhouetted, anthropomorphic apple. ..."
+          />
+          <h3>Comics</h3>
+          <p>
+            Sequential art that focuses on character, story, and layout to convey compelling narratives.
+          </p>
+        </a>
+      </article>
+
+      <!-- If you have more featured items, you can do the same approach -->
+      <!--
+      <article class="work-item">
+        <a href="personal-work.html" class="card-link">
+          <img src="images/slideshow/slideshow2.jpg" alt="Sample Work 3" />
+          <h3>Personal Work</h3>
+          <p>
+            Experimental pieces and sketches that explore new ideas, styles, and creative techniques.
+          </p>
+        </a>
+      </article>
+      -->
+      
+    </div>
+    <a href="portfolio.html" class="btn btn-secondary">See Full Portfolio</a>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2024 Jason Wilson. All rights reserved.</p>
+      <!-- Social links can go here if you like:
+      <ul class="social-links">
+        <li><a href="#" aria-label="Twitter">Twitter</a></li>
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+      </ul>
+      -->
+    </div>
+  </footer>
+
+  <!-- Script references -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>
