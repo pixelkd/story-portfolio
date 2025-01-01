@@ -314,3 +314,40 @@ body {
   }
 }
 }
+
+/* Media Query for Mobile/Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  /* 1. Shrink the hero section */
+  .hero-section {
+    height: 40vh; /* shorter hero on mobile */
+  }
+
+  /* 2. Scale down headings in the hero */
+  .hero-content h1 {
+    font-size: 2rem;  /* was 3rem, now smaller on mobile */
+  }
+
+  .hero-content p {
+    font-size: 1rem;  /* was 1.2rem, slightly smaller */
+  }
+
+  /* 3. Slideshow images: keep cover or switch to contain */
+  .slide-img {
+    object-fit: cover;
+    /* Optionally:
+    object-fit: contain;
+    background: #000; 
+    */
+  }
+
+  /* 4. Adjust spacing if needed */
+  .intro-section,
+  .featured-work {
+    padding: 1rem 0; /* smaller vertical padding on mobile */
+  }
+
+  /* 5. Container can be narrower/wider if you like */
+  .container {
+    width: 95%; /* was 90%; can help avoid text overflow on small screens */
+  }
+}
