@@ -173,8 +173,8 @@
 .main-image-container img.fit-view {
   max-height: 80vh;
   width: auto; 
-  /* ensures entire image fits in container's height */
   height: auto;
+  object-fit: contain;
 }
 
 /*************************************************
