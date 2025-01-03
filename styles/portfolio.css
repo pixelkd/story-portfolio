@@ -1,0 +1,270 @@
+
+/*************************************************
+ * PORTFOLIO GRID (TOP SECTION)
+ *************************************************/
+
+ 
+.portfolio-grid {
+  align-items: center;
+  display: grid;
+  /* 
+    For a more cinematic feel, let each column be at least 400px wide, 
+    expanding to fill the horizontal space. 
+    If there's room for 3 or 4 columns, they'll flow side by side. 
+    Once the viewport can no longer fit them at 400px each, they wrap to the next row.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1rem;
+  margin-top: 1rem;
+
+}
+
+.portfolio-column {
+  
+  border: 1px solid #ccc;    /* optional outline */
+  cursor: pointer;
+  position: relative;
+  height: 80vh;              /* fill ~80% of viewport height for a cinematic tall feel */
+  overflow: hidden;          /* anything outside gets clipped */
+}
+
+/* 
+   We anchor the image to the bottom-center:
+   1) left: 50% + transform: translateX(-50%) centers horizontally.
+   2) bottom: 0 ensures it’s pinned to the bottom edge.
+   3) width: 120% so it bleeds out of the column horizontally,
+      giving you that “clipped” effect on the sides.
+   4) object-fit: cover ensures the image remains properly cropped.
+*/
+.portfolio-column img {
+  display: block;
+  width: 100%;            /* Let the image fill the column's width first */
+  height: 100%;           /* and also fill the column's height */
+  object-fit: cover;      /* crop whichever dimension exceeds the column’s aspect ratio */
+  object-position: 50% 0; /* horizontally center (50%), vertically top (0%) */
+}
+
+.my_container {
+  align-items: center;
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  
+}
+
+/*************************************************
+ * SHADOWBOX OVERLAY
+ *************************************************/
+.shadowbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999;
+  display: none; /* hidden by default */
+  overflow: auto; /* if content is larger than viewport, user can scroll the entire overlay */
+}
+
+.shadowbox.show {
+  display: block;
+}
+
+/* Main container inside the shadowbox for content alignment */
+.shadowbox-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Header row inside the container */
+.shadowbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.shadowbox-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* The main content area:
+   - On desktop, icons on left, image in middle, paragraph on right
+   - On mobile, we let it flex-wrap so icons go top, image, then paragraph
+*/
+.shadowbox-content {
+  display: flex;
+  flex-wrap: wrap; /* let items wrap on small screens */
+  gap: 1rem;
+}
+
+/*************************************************
+ * Thumbnails (Desktop: left column; Mobile: top row)
+ *************************************************/
+.shadowbox-thumbs {
+  flex: 0 0 80px; /* on desktop, fixed 80px wide column */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  order: 1; /* icons come first in the row */
+}
+
+.shadowbox-thumbs img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid #eee;
+  cursor: pointer;
+}
+
+.shadowbox-thumbs img.active-thumb {
+  border-color: #f90;
+}
+
+/*************************************************
+ * Main image container (middle on desktop)
+ *************************************************/
+.shadowbox-main {
+  flex: 1; 
+  order: 2; /* next after thumbs */
+  display: flex;
+  align-items: flex-start; /* top align */
+  justify-content: center;
+  min-width: 300px; /* ensure some minimum space */
+}
+
+.main-image-container {
+  max-height: 80vh; /* if the image is taller, scroll inside here */
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+/* The image has two states: .default-view and .fit-view 
+   Default: show actual size (if it’s bigger, user scrolls)
+   Fit: scale down so entire image fits vertically
+*/
+.main-image-container img {
+  display: block;
+  width: 100%;            /* Let the image fill the column's width first */
+  height: 100%;           /* and also fill the column's height */
+  object-fit: cover;      /* crop whichever dimension exceeds the column’s aspect ratio */
+  object-position: 50% 0;
+}
+
+.main-image-container img.default-view {
+  /* actual size, possibly taller than container => scroll */
+}
+.main-image-container img.fit-view {
+  max-height: 80vh;
+  width: auto; 
+  /* ensures entire image fits in container's height */
+  height: auto;
+}
+
+/*************************************************
+ * Right info column
+ *************************************************/
+.shadowbox-info {
+  flex: 0 0 250px; 
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  max-width: 100%;
+  /* background: #fafafa; optional background color */
+}
+
+/* Paragraph & link container */
+#shadowboxDescription {
+  font-size: 0.95rem;
+}
+
+/* The button is below the paragraph */
+.zoom-btn {
+  padding: 0.5rem 1rem;
+  background: #666;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start; /* or flex-end if you want it right-aligned */
+}
+
+.more-link a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: #0099ff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/*************************************************
+ * Bottom nav dots
+ *************************************************/
+.shadowbox-footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.nav-dots {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.nav-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+.nav-dots .dot.active {
+  background-color: #666;
+}
+
+/*************************************************
+ * Responsive Behavior for smaller devices
+ *************************************************/
+@media (max-width: 768px) {
+  .portfolio-column {
+    height: 50vh; /* shorter columns on tablets/phones if desired */
+  }
+
+  /* Let info span full width, icons top, paragraph bottom */
+  .shadowbox-thumbs {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 1;
+  }
+  .shadowbox-main {
+    order: 2;
+    min-width: 100%;
+  }
+  .shadowbox-info {
+    order: 3;
+    flex: 1 1 100%;
+    align-items: flex-start;
+  }
+  .zoom-btn {
+    margin-bottom: 1rem; /* keep spacing on small screens */
+  }
+}
