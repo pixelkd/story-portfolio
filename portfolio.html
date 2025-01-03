@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Jason Wilson Storyboard</title>
+  <!-- Your existing main.css or base styles -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <!-- Custom page-specific styles -->
+  <link rel="stylesheet" href="styles/portfolio.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">Jason Wilson</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="mobile-toggle" id="mobileToggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Top Portfolio Display: 4 columns on desktop, smaller on narrow screens -->
+  <section class="portfolio-section">
+    <div class="container">
+      <h1>Portfolio</h1>
+      <div class="portfolio-grid">
+        <!-- Column 1 -->
+        <div 
+          class="portfolio-column" 
+          data-index="0"
+          data-title="Dr. Ride Board"
+        >
+          <img src="images/portfolio/dr_ride1_board.jpg" alt="Dr. Ride Storyboard" />
+        </div>
+        <!-- Column 2 -->
+        <div 
+          class="portfolio-column"
+          data-index="1"
+          data-title="EE01 Inked Page"
+        >
+          <img src="images/portfolio/E01_22_ink.jpg" alt="EE01 Inked Comic Page" />
+        </div>
+        <!-- Column 3 -->
+        <div 
+          class="portfolio-column"
+          data-index="2"
+          data-title="DS Tallboard"
+        >
+          <img src="images/portfolio/ds_tallboard_web.jpg" alt="DS Tallboard" />
+        </div>
+        <!-- Column 4 -->
+        <div 
+          class="portfolio-column"
+          data-index="3"
+          data-title="GG Page 11 Inks"
+        >
+          <img src="images/portfolio/gg_pg11_inks.jpg" alt="GG Pg11 Inks" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Work Section (example) -->
+  <section class="featured-work">
+    <div class="container">
+      <h2>Explore More Works</h2>
+      <div class="work-grid">
+        <!-- Link to storyboards -->
+        <article class="work-item">
+          <a href="storyboards.html" class="card-link">
+            <img src="images/slideshow/slideshow3.jpg" alt="Storyboards" />
+            <h3>Storyboards</h3>
+            <p>
+              Cinematic sketches that outline action, pacing, and shot composition
+              for film and animation.
+            </p>
+          </a>
+        </article>
+        <!-- Link to comics -->
+        <article class="work-item">
+          <a href="comics.html" class="card-link">
+            <img src="images/slideshow/slideshow4.jpg" alt="Comics" />
+            <h3>Comics</h3>
+            <p>
+              Sequential art that focuses on character, story, and layout to convey
+              compelling narratives.
+            </p>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2024 Jason Wilson. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- The Shadowbox Overlay -->
+  <div class="shadowbox" id="shadowbox">
+    <div class="shadowbox-container">
+      <!-- Header row for close and piece title -->
+      <div class="shadowbox-header">
+        <h2 id="shadowboxTitle">Piece Title</h2>
+        <button class="close-btn" id="closeBtn" aria-label="Close">X</button>
+      </div>
+
+      <!-- Content area: top icons on phone, or left icons on desktop;
+           main image in center (scrollable if tall),
+           paragraph on right (or below on small screens),
+           zoom button below paragraph. 
+      -->
+      <div class="shadowbox-content">
+        <!-- Thumbnails -->
+        <div class="shadowbox-thumbs" id="shadowboxThumbs">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Main image (scrollable if tall) -->
+        <div class="shadowbox-main">
+          <div class="main-image-container" id="mainImageContainer">
+            <img
+              id="shadowboxMainImg"
+              src=""
+              alt="Portfolio Piece"
+              class="default-view"
+            />
+          </div>
+        </div>
+
+        <!-- Right info / paragraph -->
+        <div class="shadowbox-info">
+          <div id="shadowboxDescription">Description goes here...</div>
+          <div id="shadowboxMoreLink" class="more-link"></div>
+          <!-- Zoom toggle below the paragraph -->
+          <button class="zoom-btn" id="zoomBtn" aria-label="Zoom Toggle">
+            Fit Entire Image
+          </button>
+        </div>
+      </div>
+
+      <!-- Bottom nav dots to switch among the 4 primary pieces -->
+      <div class="shadowbox-footer">
+        <div class="nav-dots" id="navDots"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts/main.js"></script> <!-- your existing nav, etc. -->
+  <script src="scripts/portfolio.js"></script>
+</body>
+</html>
