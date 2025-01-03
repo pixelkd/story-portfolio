@@ -13,7 +13,7 @@
     If there's room for 3 or 4 columns, they'll flow side by side. 
     Once the viewport can no longer fit them at 400px each, they wrap to the next row.
   */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
   margin: 1rem;
   margin-top: 1rem;
