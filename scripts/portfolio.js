@@ -3,29 +3,29 @@
 // Demo data for 4 pieces
 const portfolioData = [
   {
-    title: "Dr. Ride Board",
+    title: "Storyboard: Ride into the city",
     thumbs: [
       {
         src: "images/portfolio/dr_ride1_board.jpg",
         alt: "Dr. Ride Board",
-        description: "Storyboard for a film project. Linked roughs show the concept’s progression.",
+        description: "Storyboard for a film project. Linked roughs show the concept’s progression. See the storyboard section for more in this sequence and other work like this.",
         linkType: "storyboard"
       },
       {
         src: "images/portfolio/ds_lobby_roughs.jpg",
         alt: "DS Lobby Roughs",
-        description: "Rough sketches for the same project, capturing the lobby scene.",
+        description: "Rough sketches for the same project as I was developing ideas for the later progressions.",
         linkType: "storyboard"
       }
     ]
   },
   {
-    title: "EE01 Inked Page",
+    title: "Comic page: Unexpected visitors",
     thumbs: [
       {
         src: "images/portfolio/E01_22_ink.jpg",
         alt: "EE01 Inks",
-        description: "Inked comic book page. Compare pencils and roughs to see the evolution.",
+        description: "Inked comic book page. Compare pencils and roughs to see the evolution. See more pages in the Comic section.",
         linkType: "comic"
       },
       {
@@ -37,35 +37,35 @@ const portfolioData = [
       {
         src: "images/portfolio/E01_22_rough.jpg",
         alt: "EE01 Roughs",
-        description: "Very rough layout before pencils.",
+        description: "Early rough layouts for the page.",
         linkType: "comic"
       }
     ]
   },
   {
-    title: "DS Tallboard",
+    title: "Storyboard: Secure entry",
     thumbs: [
       {
         src: "images/portfolio/ds_tallboard_web.jpg",
         alt: "DS Tallboard",
-        description: "A tall storyboard item for a film project.",
+        description: "A storyboard item for a film project. See the storyboard section for more in this sequence and other work like this.",
         linkType: "storyboard"
       },
       {
         src: "images/portfolio/ds_roughs.jpg",
         alt: "DS Roughs",
-        description: "Early rough sketches for DS Tallboard.",
+        description: "Early rough sketches for this scene.",
         linkType: "storyboard"
       }
     ]
   },
   {
-    title: "GG Page 11 Inks",
+    title: "Comic page: Flight",
     thumbs: [
       {
         src: "images/portfolio/gg_pg11_inks.jpg",
         alt: "GG Page 11 Inks",
-        description: "Inked comic page. Additional variants below.",
+        description: "Inked comic page. See the included icons to see development. See the comic section for more like this.",
         linkType: "comic"
       },
       {
@@ -158,7 +158,7 @@ function openShadowbox(itemIdx, thumbIdx) {
   // Reset zoom states
   shadowboxMainImg.classList.remove('fit-view');
   shadowboxMainImg.classList.add('default-view');
-  zoomBtn.textContent = "Fit Entire Image";
+  zoomBtn.textContent = "Fit Image";
 }
 
 // Mark active dot
