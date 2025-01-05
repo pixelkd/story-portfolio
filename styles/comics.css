@@ -1,0 +1,202 @@
+/*************************************************
+ * MAIN PAGE: Row Layout
+ *************************************************/
+.comics-sequences {
+  padding: 2rem 0;
+}
+
+.comics-row {
+  margin-bottom: 2rem;
+}
+
+.comics-row h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.row-boards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; 
+  align-items: flex-start;
+}
+
+/* Primary board (slightly bigger) */
+.primary-board {
+  flex: 0 0 220px; 
+  cursor: pointer;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.primary-board img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Secondary boards (smaller) */
+.secondary-board {
+  flex: 0 0 120px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.secondary-board img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* HR */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+}
+
+/*************************************************
+ * LIGHTBOX: 3-Column Continuous Scrolling
+ *************************************************/
+.shadowbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999;
+  display: none; /* hidden by default */
+  overflow: hidden; 
+}
+
+.shadowbox.show {
+  display: block;
+}
+
+.shadowbox-container {
+  max-width: 1200px;
+  height: 90vh; /* so center can scroll internally */
+  margin: 2rem auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.shadowbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+}
+
+.shadowbox-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.shadowbox-content {
+  flex: 1; 
+  display: flex; /* 3 columns: thumbs, boards, info */
+  overflow: hidden;
+}
+
+/* Left Column: Thumbnails */
+.shadowbox-thumbs {
+  flex: 0 0 80px; 
+  background: #fff;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+  padding: 1rem 0.5rem;
+}
+
+.shadowbox-thumbs img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #eee;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.shadowbox-thumbs img.active-thumb {
+  border-color: #f90;
+}
+
+/* Center Column: vertical scroll of boards */
+.lightbox-boards {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #fafafa;
+  position: relative;
+  scroll-behavior: smooth; /* animate scrolling to board */
+}
+
+.board-item {
+  margin-bottom: 2rem; /* gap between boards */
+}
+
+.board-item img {
+  width: 100%; 
+  height: auto;
+  object-fit: contain; 
+  display: block;
+}
+
+/* Right Column: Single paragraph & optional zoom */
+.shadowbox-info {
+  flex: 0 0 250px;
+  padding: 1rem;
+  background: #fff;
+  border-left: 1px solid #ccc;
+  overflow-y: auto; 
+}
+
+#lightboxDescription {
+  margin-bottom: 1rem;
+}
+
+.zoom-btn {
+  padding: 0.5rem 1rem;
+  background: #666;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/*************************************************
+ * Responsive Behavior
+ *************************************************/
+@media (max-width: 768px) {
+  .shadowbox-content {
+    flex-direction: column;
+  }
+  .shadowbox-thumbs {
+    flex: 0 0 auto;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+  .lightbox-boards {
+    flex: 1;
+    width: 100%;
+  }
+  .shadowbox-info {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #ccc;
+  }
+}

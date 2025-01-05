@@ -22,7 +22,7 @@
 
 .portfolio-column {
   
-  border: 1px solid #ccc;    /* optional outline */
+  border: 5px solid #ccc;    /* optional outline */
   cursor: pointer;
   position: relative;
   height: 80vh;              /* fill ~80% of viewport height for a cinematic tall feel */

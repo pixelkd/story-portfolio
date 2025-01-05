@@ -1,0 +1,63 @@
+/* about.css */
+
+/* Hero section layout */
+.about-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* ensures a stacked layout on smaller screens */
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+/* The hero image on the left or top (depending on screen size) */
+.about-hero img {
+  width: 400px;      /* fixed width for example */
+  max-width: 90vw;   /* keep it responsive */
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover; /* in case the image has a fixed dimension */
+}
+
+/* The text container */
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Contact call-to-action */
+.about-contact {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.about-contact h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.email-address {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .about-hero {
+    flex-direction: column;
+  }
+  .about-hero img {
+    margin-bottom: 1rem;
+  }
+}
