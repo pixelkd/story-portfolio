@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comics - Jason Wilson</title>
+  <!-- Your base / main styles -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <!-- Page-specific styles for the comics branch -->
+  <link rel="stylesheet" href="styles/comics.css" />
+</head>
+<body>
+  <!-- Header (reuse from main site) -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">Jason Wilson</a>
+      </div>
+	  
+      <ul class="nav-links">
+		<li><a href="index.html">Home</a></li>
+        
+        <li><a href="portfolio.html">Portfolio</a></li>
+        
+		<li><a href="about.html">About</a></li>
+      </ul>
+      <div class="mobile-toggle" id="mobileToggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Intro / Title -->
+  <section class="comics-header">
+    <div class="container">
+      <h1>Comic Sequences</h1>
+      <p>
+        Below are several comic sequences or pages that I've illustrated. 
+        Click any image to view the full sequence in a continuous, scrollable view.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Page: Rows for each comic sequence -->
+  <section class="comics-sequences">
+    <div class="container">
+      <!-- 1) Evil apple plans to travel to our dimension -->
+      <div class="comics-row">
+        <h2>Evil Apple Invasion</h2>
+        <div class="row-boards">
+          <!-- First board (primary) -->
+          <div 
+            class="primary-board"
+            data-sequence-index="0"
+            data-board-index="0"
+          >
+            <img 
+              src="images/comics/appleOfEvile_01.jpg"
+              alt="Evil Apple Page 1"
+            />
+          </div>
+          <!-- Second board (secondary) -->
+          <div
+            class="secondary-board"
+            data-sequence-index="0"
+            data-board-index="1"
+          >
+            <img 
+              src="images/comics/appleOfEvile_02.jpg"
+              alt="Evil Apple Page 2"
+            />
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <!-- 2) Selected pages from Halloween-Man, Lucy returns home... -->
+      <div class="comics-row">
+        <h2>Lucy Returns Home</h2>
+        <div class="row-boards">
+          <div 
+            class="primary-board"
+            data-sequence-index="1"
+            data-board-index="0"
+          >
+            <img 
+              src="images/comics/E01_20_ink.jpg"
+              alt="Lucy Returns - Page 1"
+            />
+          </div>
+          <div
+            class="secondary-board"
+            data-sequence-index="1"
+            data-board-index="1"
+          >
+            <img 
+              src="images/comics/E01_22_ink.jpg"
+              alt="Lucy Returns - Page 2"
+            />
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <!-- 3) Lucy's evil doppleganger... E2_18, E2_19, E2_20, E2_21 -->
+      <div class="comics-row">
+        <h2>Lucy’s Evil Doppelganger</h2>
+        <div class="row-boards">
+          <div 
+            class="primary-board"
+            data-sequence-index="2"
+            data-board-index="0"
+          >
+            <img 
+              src="images/comics/E2_18.jpg"
+              alt="E2_18"
+            />
+          </div>
+          <div
+            class="secondary-board"
+            data-sequence-index="2"
+            data-board-index="1"
+          >
+            <img 
+              src="images/comics/E2_19.jpg"
+              alt="E2_19"
+            />
+          </div>
+          <div
+            class="secondary-board"
+            data-sequence-index="2"
+            data-board-index="2"
+          >
+            <img 
+              src="images/comics/E2_20.jpg"
+              alt="E2_20"
+            />
+          </div>
+          <div
+            class="secondary-board"
+            data-sequence-index="2"
+            data-board-index="3"
+          >
+            <img 
+              src="images/comics/E2_21.jpg"
+              alt="E2_21"
+            />
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <!-- 4) Cult leader tries to flee with the spellbook... gg_pg11_inks -->
+      <div class="comics-row">
+        <h2>Cult Leader’s Escape</h2>
+        <div class="row-boards">
+          <div 
+            class="primary-board"
+            data-sequence-index="3"
+            data-board-index="0"
+          >
+            <img 
+              src="images/comics/gg_pg11_inks.jpg"
+              alt="Cult Leader Board"
+            />
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <!-- 5) Selected page from Halloween-Man anniversary issue => page0008.jpg -->
+      <div class="comics-row">
+        <h2>Anniversary Issue Page</h2>
+        <div class="row-boards">
+          <div 
+            class="primary-board"
+            data-sequence-index="4"
+            data-board-index="0"
+          >
+            <img 
+              src="images/comics/page0008.jpg"
+              alt="Anniversary Issue - Page 8"
+            />
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <!-- 6) After a spinosaurus takes down its prey => v_p14, v_p15, v_p16 -->
+      <div class="comics-row">
+        <h2>Spinosaurus Vampiric Encounter</h2>
+        <div class="row-boards">
+          <div 
+            class="primary-board"
+            data-sequence-index="5"
+            data-board-index="0"
+          >
+            <img 
+              src="images/comics/v_p14.jpg"
+              alt="Vampire Dino - Page 14"
+            />
+          </div>
+          <div
+            class="secondary-board"
+            data-sequence-index="5"
+            data-board-index="1"
+          >
+            <img 
+              src="images/comics/v_p15.jpg"
+              alt="Vampire Dino - Page 15"
+            />
+          </div>
+          <div
+            class="secondary-board"
+            data-sequence-index="5"
+            data-board-index="2"
+          >
+            <img 
+              src="images/comics/v_p16.jpg"
+              alt="Vampire Dino - Page 16"
+            />
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <!-- 7) The Wurst => WurstFest_01_lrg.jpg -->
+      <div class="comics-row">
+        <h2>The Wurst</h2>
+        <div class="row-boards">
+          <div 
+            class="primary-board"
+            data-sequence-index="6"
+            data-board-index="0"
+          >
+            <img 
+              src="images/comics/WurstFest_01_lrg.jpg"
+              alt="The Wurst - Page"
+            />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Continuous-Scrolling Lightbox for comics -->
+  <div class="shadowbox" id="shadowbox">
+    <div class="shadowbox-container">
+      <!-- Header Row -->
+      <div class="shadowbox-header">
+        <h2 id="lightboxTitle">Sequence Title</h2>
+        <button class="close-btn" id="closeBtn" aria-label="Close">X</button>
+      </div>
+      <div class="shadowbox-content">
+        <!-- Left Column: Thumbnails -->
+        <div class="shadowbox-thumbs" id="lightboxThumbs"></div>
+        <!-- Center Column: vertical scrolling boards -->
+        <div class="lightbox-boards" id="lightboxBoards"></div>
+        <!-- Right Column: Single paragraph, plus optional zoom button -->
+        <div class="shadowbox-info">
+          <div id="lightboxDescription">Sequence-wide description...</div>
+          <!-- <button class="zoom-btn" id="zoomBtn" aria-label="Zoom Toggle"> -->
+            <!-- Fit Entire Width -->
+          <!-- </button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2024 Jason Wilson. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/main.js"></script> <!-- Your nav/hamburger logic, etc. -->
+  <script src="scripts/comics.js"></script> <!-- The new comics logic -->
+</body>
+</html>

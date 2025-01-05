@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Storyboards - Jason Wilson</title>
+  <!-- Your base / main styles -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <!-- Page-specific styles for the storyboards -->
+  <link rel="stylesheet" href="styles/storyboards.css" />
+</head>
+<body>
+  <!-- Header (reuse from main site) -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">Jason Wilson</a>
+      </div>
+      <ul class="nav-links">
+		<li><a href="index.html">Home</a></li>
+        
+        <li><a href="portfolio.html">Portfolio</a></li>
+        
+		<li><a href="about.html">About</a></li>
+      </ul>
+      <div class="mobile-toggle" id="mobileToggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Intro / Title -->
+  <section class="storyboards-header">
+    <div class="container">
+      <h1>Storyboard Projects</h1>
+      <p>
+        Explore a few of my storyboard sequences. Click any image to open a continuous 
+        scrolling view of that entire sequence.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Page: Horizontal rows or tiles for each sequence -->
+  <section class="storyboard-sequences">
+    <div class="container">
+      <!-- Nature Sequence (just 1 board as an example) -->
+      <div class="storyboard-row">
+        <h2>Nature Sequence</h2>
+        <div class="row-boards">
+          <!-- The data-sequence-index references the '0'th sequence in our JS data,
+               data-board-index references the '0'th board in that sequence. -->
+          <div 
+            class="primary-board" 
+            data-sequence-index="0"
+            data-board-index="0"
+          >
+            <img 
+              src="images/storyboards/nature.jpg" 
+              alt="Nature Sequence"
+            />
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <!-- Science Fiction Sequence -->
+      <div class="storyboard-row">
+        <h2>Science Fiction Opening</h2>
+        <div class="row-boards">
+          <!-- Primary board: 0th item in the SciFi sequence -->
+          <div 
+            class="primary-board" 
+            data-sequence-index="1"
+            data-board-index="0"
+          >
+            <img 
+              src="images/storyboards/hallboards_01.jpg"
+              alt="Sci-Fi Opening - Board 1"
+            />
+          </div>
+
+          <!-- Additional smaller boards: 1..3 in that sequence -->
+          <div 
+            class="secondary-board"
+            data-sequence-index="1"
+            data-board-index="1"
+          >
+            <img 
+              src="images/storyboards/collective_01.jpg" 
+              alt="Sci-Fi Opening - Board 2"
+            />
+          </div>
+          <div 
+            class="secondary-board"
+            data-sequence-index="1"
+            data-board-index="2"
+          >
+            <img 
+              src="images/storyboards/collective_02.jpg" 
+              alt="Sci-Fi Opening - Board 3"
+            />
+          </div>
+          <div 
+            class="secondary-board"
+            data-sequence-index="1"
+            data-board-index="3"
+          >
+            <img 
+              src="images/storyboards/collective_03.jpg" 
+              alt="Sci-Fi Opening - Board 4"
+            />
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <!-- Heist Scene -->
+      <div class="storyboard-row">
+        <h2>Heist Scene Opening</h2>
+        <div class="row-boards">
+          <div 
+            class="primary-board"
+            data-sequence-index="2"
+            data-board-index="0"
+          >
+            <img 
+              src="images/storyboards/dr_ride1_board.jpg"
+              alt="Heist Scene - Board 1"
+            />
+          </div>
+          <div 
+            class="secondary-board"
+            data-sequence-index="2"
+            data-board-index="1"
+          >
+            <img 
+              src="images/storyboards/lobby_boards01.jpg" 
+              alt="Heist Scene - Board 2"
+            />
+          </div>
+          <div 
+            class="secondary-board"
+            data-sequence-index="2"
+            data-board-index="2"
+          >
+            <img 
+              src="images/storyboards/lobby_boards02.jpg" 
+              alt="Heist Scene - Board 3"
+            />
+          </div>
+          <div 
+            class="secondary-board"
+            data-sequence-index="2"
+            data-board-index="3"
+          >
+            <img 
+              src="images/storyboards/lobby_boards03.jpg" 
+              alt="Heist Scene - Board 4"
+            />
+          </div>
+          <div 
+            class="secondary-board"
+            data-sequence-index="2"
+            data-board-index="4"
+          >
+            <img 
+              src="images/storyboards/lobby_boards04.jpg" 
+              alt="Heist Scene - Board 5"
+            />
+          </div>
+          <div 
+            class="secondary-board"
+            data-sequence-index="2"
+            data-board-index="5"
+          >
+            <img 
+              src="images/storyboards/lobby_boards05.jpg" 
+              alt="Heist Scene - Board 6"
+            />
+          </div>
+          <div 
+            class="secondary-board"
+            data-sequence-index="2"
+            data-board-index="6"
+          >
+            <img 
+              src="images/storyboards/lobby_boards06.jpg" 
+              alt="Heist Scene - Board 7"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Continuous-Scrolling Lightbox -->
+  <div class="shadowbox" id="shadowbox">
+    <div class="shadowbox-container">
+      <!-- Header Row -->
+      <div class="shadowbox-header">
+        <h2 id="lightboxTitle">Sequence Title</h2>
+        <button class="close-btn" id="closeBtn" aria-label="Close">X</button>
+      </div>
+      <div class="shadowbox-content">
+        <!-- Left Column: Thumbnails -->
+        <div class="shadowbox-thumbs" id="lightboxThumbs">
+          <!-- Populated dynamically by JS -->
+        </div>
+        <!-- Center Column: vertical scrolling boards -->
+        <div class="lightbox-boards" id="lightboxBoards">
+          <!-- Populated dynamically by JS -->
+        </div>
+        <!-- Right Column: Single paragraph, plus optional zoom button -->
+        <div class="shadowbox-info">
+          <div id="lightboxDescription">Sequence-wide description...</div>
+          <!-- <button class="zoom-btn" id="zoomBtn" aria-label="Zoom Toggle"> -->
+            <!-- Fit Entire Width -->
+          <!-- </button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2024 Jason Wilson. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/main.js"></script> <!-- Your existing site scripts (nav toggle, etc.) -->
+  <script src="scripts/storyboards.js"></script>
+</body>
+</html>
