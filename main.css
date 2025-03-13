@@ -374,6 +374,75 @@ main {
     display: none;
 }
 
+/* ============================= */
+/* 🌟 About Section */
+/* ============================= */
+.about_profile_img {
+    width: 300px;   /* Fixed width */
+    height: 200px;  /* Fixed height */
+    object-fit: cover;
+    border-radius: 12px;  /* Rounded corners */
+    border: 1px solid var(--border-color);
+}
+
+/* About banner (text area) */
+.about_banner {
+    background: #1d1d1d; /* Same as storyboard stage */
+    color: var(--text-color);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 100%; /* Ensures responsiveness */
+    width: calc(100% - 320px); /* Adjusts for sidebar if present */
+    margin: 0 auto;
+    border: var(--thin-border);
+}
+
+/* Text inside the About banner */
+.about_banner p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 100%;
+}
+
+/* Resume (PDF Container) */
+.resume_container {
+    width: calc(100% - 320px); /* Same width as About banner */
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* PDF Viewer */
+.pdf_viewer {
+    width: 100%;
+    height: 500px; /* Fixed height */
+    border: var(--thin-border);
+}
+
+/* Download Button */
+.download_button {
+    display: inline-block;
+    background: var(--button-bg);
+    color: var(--text-color);
+    border: var(--thin-border);
+    padding: 6px 12px;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background 0.2s ease-in-out;
+}
+
+.download_button:hover {
+    background: var(--button-hover);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .about_banner,
+    .resume_container {
+        width: calc(100% - 40px); /* Shrink width for smaller screens */
+    }
+}
+
 
 /* ================================
    📖 COMICS LAYOUT

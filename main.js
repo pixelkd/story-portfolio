@@ -74,14 +74,19 @@ function NavLinkActivated() {
             }, 200);
 
             // Update the list label when clicking Storyboards or Comics links
-            if (this.id === "nav-storyboards"){
+            if (this.id === "nav-storyboards") {
                 loadProjects("story_link");
                 updateListLabel("Storyboards List");
-
+            
             } else if (this.id === "nav-comics") {
                 loadProjects("comics_link");
                 updateListLabel("Comics List");
+            
+            } else if (this.id === "nav-about") {
+                load_about();
+                updateListLabel("About");
             }
+            
 
             // ---------------------- Close Hamburger Menu ----------------------
             // Only close if we're in mobile view (menu is active)
