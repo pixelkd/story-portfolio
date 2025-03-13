@@ -1,137 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jason Wilson Storyboard Portfolio</title>
-  <!-- Link to the main CSS file -->
-  <link rel="stylesheet" href="styles/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Jason B Wilson - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
 </head>
-<body>
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">Jason Wilson</a>
-      </div>
 
-      <ul class="nav-links">
-		<li><a href="index.html" class="active">Home</a></li>
-        
-        <li><a href="portfolio.html">Portfolio</a></li>
-        
-		<li><a href="about.html">About</a></li>
-        <!-- <li><a href="contact.html">Contact</a></li> --> <!-- combining about and contact for now -->
-      </ul>
+<header class="header">
+    <div class="inner-header">
+        <div class="logo-container">
+            <h1 class="logo">Jason B. Wilson <span>Portfolio</span></h1>
+            <h2 class="email">jasonbwilson.story@gmail.com</h2>
+        </div>
 
-      <!-- Mobile toggle button -->
-      <div class="mobile-toggle" id="mobileToggle">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </nav>
-  </header>
+        <nav class="nav-bar">
+            <ul class="navigation" id="nav-links">
+                <li><a class = "nav-link" id= "nav-storyboards">Storyboards</a></li>
+                <li><a class = "nav-link" id= "nav-comics">Comics</a></li>
+                <li><a class = "nav-link" href="about.html" id= "nav-about">About</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </div>
+</header>
+    
+<main>
+    <div class = "project-selection">
+        <aside class="article_list">
+            <div class = list_label></span><h2></h2></div>
+            
+            
+            <div class="article_list_items"> <!-- Keep this list between 2 and 4 -->
+                <!-- These items will be dynamically loaded into the hero area when clicked -->
+                <!-- item 1-->
 
-  <!-- Hero Section with Slideshow -->
-  <section class="hero-section">
-    <!-- Slideshow container -->
-    <div class="hero-slideshow">
-      <!-- Each image is absolutely positioned, we'll fade in/out with JS -->
-      <img src="images/slideshow/slideshow1.jpg" aria-hidden="true" class="slide-img active" />
-      <img src="images/slideshow/slideshow2.jpg" aria-hidden="true" class="slide-img" />
-      <img src="images/slideshow/slideshow3.jpg" aria-hidden="true" class="slide-img" />
-      <img src="images/slideshow/slideshow4.jpg" aria-hidden="true" class="slide-img" />
-      <img src="images/slideshow/slideshow5.jpg" aria-hidden="true" class="slide-img" />
-	  <!-- slideshow is decrative background, in black and white, with no text -->
+            </div>
+        </aside>
     </div>
 
-    <!-- Hero content over the slideshow -->
-    <div class="hero-content">
-      <h1>Storyboard &amp; Comic Artist</h1>
-      <p>Capturing stories, one frame at a time.</p>
-      <a href="portfolio.html" class="btn btn-primary">View My Work</a>
+    <div class="hero">
+
+    
+        <div class="additional_project_items"> <!-- Centered below stage container -->
+            <!-- Keep this list between 2 and 4 -->
+            <div class="project_item">
+                <img src="images/t3.jpg" alt="2" class="project_item_img">
+                <h3>View project Item</h3>
+            </div>
+            
+            <div class="project_item">
+                <img src="images/t3.jpg" alt="2" class="project_item_img">
+                <h3>View project Item</h3>
+            </div>
+    
+            <div class="project_item">
+                <img src="images/t3.jpg" alt="2" class="project_item_img">
+                <h3>View project Item</h3>
+            </div>
+        </div>
     </div>
-  </section>
+    
+</main>
+    
+    
 
-  <!-- Introduction / Overview -->
-  <section class="intro-section">
-    <div class="container">
-      <h2>Welcome to My Storyboard Portfolio</h2>
-      <p>
-        I create dynamic storyboards for independent film and animation, 
-        as well as comics. Explore my portfolio to see how I bring stories 
-        to life, one sketch at a time.
-      </p>
-    </div>
-  </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section copyright">
+                <p>&copy; 2025 Jason B Wilson</p>
+            </div>
+            <div class="footer-section contact">
+                <p><a href="mailto:jasonbwilson.story@gmail.com">jasonbwilson.story@gmail.com</a></p>
+            </div>
 
-<section class="featured-work">
-  <div class="container">
-    <h2>Explore My Work</h2>
-    <div class="work-grid">
 
-      <!-- Storyboards item -->
-      <article class="work-item">
-        <a href="storyboards.html" class="card-link">
-          <img
-            src="images/slideshow/slideshow3.jpg"
-            alt="A rough, black-and-white collage of four storyboard panels. ..."
-          />
-          <h3>Storyboards</h3>
-          <p>
-            Cinematic sketches that outline action, pacing, and shot composition for film and animation.
-          </p>
-        </a>
-      </article>
+            <div class="footer-section social">
+                <a href="https://bsky.app/profile/example" target="_blank">
+                    <img src="images/svg/bluesky.svg" alt="Bluesky">
+                </a>
+                <a href="https://instagram.com/example" target="_blank">
+                    <img src="images/svg/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://youtube.com/example" target="_blank">
+                    <img src="images/svg/youtube.svg" alt="YouTube">
+                </a>
+            </div>
 
-      <!-- Comics item -->
-      <article class="work-item">
-        <a href="comics.html" class="card-link">
-          <img
-            src="images/slideshow/slideshow4.jpg"
-            alt="A three-panel, black-and-white comic snippet featuring a silhouetted, anthropomorphic apple. ..."
-          />
-          <h3>Comics</h3>
-          <p>
-            Sequential art that focuses on character, story, and layout to convey compelling narratives.
-          </p>
-        </a>
-      </article>
 
-      <!-- If you have more featured items, you can do the same approach -->
-      <!--
-      <article class="work-item">
-        <a href="personal-work.html" class="card-link">
-          <img src="images/slideshow/slideshow2.jpg" alt="Sample Work 3" />
-          <h3>Personal Work</h3>
-          <p>
-            Experimental pieces and sketches that explore new ideas, styles, and creative techniques.
-          </p>
-        </a>
-      </article>
-      -->
-      
-    </div>
-    <a href="portfolio.html" class="btn btn-secondary">See Full Portfolio</a>
-  </div>
-</section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; 2024 Jason Wilson. All rights reserved.</p>
-      <!-- Social links can go here if you like:
-      <ul class="social-links">
-        <li><a href="#" aria-label="Twitter">Twitter</a></li>
-        <li><a href="#" aria-label="Instagram">Instagram</a></li>
-        <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
-      </ul>
-      -->
-    </div>
-  </footer>
-
-  <!-- Script references -->
-  <script src="scripts/main.js"></script>
+        </div>
+    </footer>
+ 
+    <script src="main.js"></script>
+    <script src = "projects.js"></script>
+    <script src = "story_page.js"></script>
+    <script src = "comics_page.js"></script>
+    <script src="utils.js"></script>
 </body>
 </html>
