@@ -303,7 +303,6 @@ const projectData = {
 "images/MT/mt-0124.jpg",
 "images/MT/mt-0125.jpg",
 "images/MT/mt-0126.jpg",
-"images/MT/mt-0127.jpg",
 "images/MT/mt-0128.jpg",
 "images/MT/mt-0129.jpg",
 "images/MT/mt-0130.jpg",
@@ -345,6 +344,30 @@ const projectData = {
 "images/MT/mt-0166.jpg",
 "images/MT/mt-0167.jpg",
 "images/MT/mt-0168.jpg"
+					],
+					"additionalItems": [
+						{ "title": "Concept Art", "image": "images/t1.jpg" },
+						{ "title": "Behind the Scenes", "image": "images/t2.jpg" }
+					]
+            },
+
+            {
+                "title": "Familiar Feud",
+                "type": "slideshow",
+                "icon": "images/ff/ff-0001.jpg",
+                "imageSequence": [
+"images/ff/ff-0001.jpg",
+"images/ff/ff-0002.jpg",
+"images/ff/ff-0003.jpg",
+"images/ff/ff-0004.jpg",
+"images/ff/ff-0005.jpg",
+"images/ff/ff-0006.jpg",
+"images/ff/ff-0007.jpg",
+"images/ff/ff-0008.jpg",
+"images/ff/ff-0009.jpg",
+"images/ff/ff-0010.jpg",
+"images/ff/ff-0011.jpg",
+"images/ff/ff-0012.jpg"
 					],
 					"additionalItems": [
 						{ "title": "Concept Art", "image": "images/t1.jpg" },
