@@ -4,6 +4,12 @@ const sites = [
         link: "/story", 
         image: "landing/assets/storypage.png",
         description: "A portfolio showcasing my work as a storyboard artist, including a collection of my storyboards and some comics pages.",
+    },
+    {
+        title: "Colorist Portfolio",
+        link: "/color", 
+        image: "landing/assets/color_page.png",
+        description: "Some exaples of my comic book colorist work.",
     }
 ];
 
